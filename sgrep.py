@@ -19,10 +19,11 @@ def grep_stdin(token):
                 sys.stdout.write(line + "\n")
 
 
-if len(sys.argv) == 2:
-    grep_stdin(sys.argv[1])
-elif len(sys.argv) >= 3:
-    grep_file(sys.argv[1])
-else:
-    print("Usage: sgrep.py token file(s)")
-    sys.exit()
+if __name__ == '__main__':
+    if len(sys.argv) == 2:
+        grep_stdin(sys.argv[1])
+    elif len(sys.argv) >= 3:
+        grep_file(sys.argv[1])
+    else:
+        print("Usage: sgrep.py token file(s)")
+        sys.exit()
