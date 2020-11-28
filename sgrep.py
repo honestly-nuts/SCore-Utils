@@ -1,6 +1,6 @@
 #! /bin/python3.8
 import sys
-import ragex
+import re
 
 if len(sys.argv) < 3:
     print("Usage: sgrep.py token file(s)")
