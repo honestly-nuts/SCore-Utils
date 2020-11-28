@@ -1,8 +1,8 @@
-# C.L.T-clones
+# Scuffed-Utils
 
-## Coreuitl clones that are no use to the real world
+## Coreuitls clones that are no use to the real world
 
-This is the official repo for the infomous C.L.T-clones project (I regret this name). 
+This is the official repo for the infomous Scuffed-Utils project (I regret this name). 
 
 The goal of this project is to remake the original gnu coreutils in python.  Why you 
 may ask? Honestly, I don't know. One day I just got this Idea that, "Why not make scuffed
