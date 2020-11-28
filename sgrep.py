@@ -2,18 +2,27 @@
 import sys
 import re
 
-if len(sys.argv) < 3:
-    print("Usage: sgrep.py token file(s)")
-    sys.exit()
 
-def grep(token):
-    text = ""
+def grep_file(token):
     for i in sys.argv[2:]:
         with open(i, "r") as fl:
             for line in fl.read().split("\n"):
-                for word in line.split(' '):
+                for word in line.split(" "):
                     if word == token:
-                        text += line
-    return text
+                        sys.stdout.write(line + "\n")
 
-print(grep(sys.argv[1]))
+
+def grep_stdin(token):
+    for line in sys.stdin.read().split("\n"):
+        for word in line.split():
+            if word == token:
+                sys.stdout.write(line + "\n")
+
+
+if len(sys.argv) == 2:
+    grep_stdin(sys.argv[1])
+elif len(sys.argv) >= 3:
+    grep_file(sys.argv[1])
+else:
+    print("Usage: sgrep.py token file(s)")
+    sys.exit()
