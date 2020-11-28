@@ -1,7 +1,5 @@
 # Scuffed-Utils
 
-## Coreuitls clones that are no use to the real world
-
 This is the official repo for the infomous Scuffed-Utils project (I regret this name). 
 
 The goal of this project is to remake the original gnu coreutils in python.  Why you 
