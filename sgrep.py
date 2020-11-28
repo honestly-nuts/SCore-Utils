@@ -7,16 +7,14 @@ def grep_file(token):
     for i in sys.argv[2:]:
         with open(i, "r") as fl:
             for line in fl.read().split("\n"):
-                for word in line.split(" "):
-                    if word == token:
-                        sys.stdout.write(line + "\n")
+                if token in line.split(" "):
+                    sys.stdout.write(line + "\n")
 
 
 def grep_stdin(token):
     for line in sys.stdin.read().split("\n"):
-        for word in line.split():
-            if word == token:
-                sys.stdout.write(line + "\n")
+        if token in line.split(" "):
+            sys.stdout.write(line + "\n")
 
 
 if len(sys.argv) == 2:
