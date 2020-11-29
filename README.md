@@ -8,7 +8,7 @@ versions of the already great gnu coreutils programs (I still don't know what it
 called, oh well)". If you are interested in this project or are just doing drugs (like I am)
 or both, then you may consider donating your juicy, yummy yummy code to this repository.
 
-[*Very good documentation*](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab\_channel=RickAstleyVEVO)
+[*Very good documentation*](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab)
 
 My email: honeastlynuts@gmail.com 
 
