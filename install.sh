@@ -14,4 +14,3 @@ mv scat.py ./bin/scat
 mv sgrep.py ./bin/sgrep
 mv syes.py ./bin/syes
 mv swhoami.py ./bin/swhoami
-

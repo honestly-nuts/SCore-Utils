@@ -10,6 +10,7 @@ def grep_file(f, token):
             for word in line.split(" "):
                 if word == token:
                     text += line
+                    text += "\n"
     return text
 
 def grep_stdin(token):
@@ -35,8 +36,18 @@ if __name__ == '__main__':
         for arg in sys.argv[2:]:
             if optlist != [] and arg not in optlist:
                 text += grep_file(arg, sys.argv[1])
+                
+                list_for_op_c = []
+
                 if "-c" in optlist:
-                    print(len(text.split("\n")))
+                    list_for_op_c.append(str(len(text.split("\n")) - 1))# The -1 is a temporary fix to the error that causes the count to be output++
+                    result = list_for_op_c[-1]
+
+                    for num in list_for_op_c[:-1]:
+                        result -= num
+
+                    sys.stdout.write(str(result))
+                    sys.stdout.write("\n")
                     n_opt_defuse = True
                 else:
                     sys.stderr.write("Option not found\n")

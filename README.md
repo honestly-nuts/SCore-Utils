@@ -34,6 +34,7 @@ chmod +x install.sh
 #### Then either restart your terminal or source your bashrc file with ```source ~/.bashrc```.
 
 # For the devs
+
 ### If you want to contribute, here are some guidelines:
 
 #### 1. Error handling:
@@ -44,6 +45,9 @@ chmod +x install.sh
   1. You should use _ inbetween words (eg. grep_file).
   2. You should make comments to explain what a line or block does
   3. You should create non-gibrish variable and function names.
+#### 3. Program standards
+  1. You should always make a test file in the tests directory for the devs to test your program. Currently I am working on the preprocessor to convert these into a txt file which you can perform the program on.
+  Until then, just add them as tutorials. syntax guidelines are given in the test/syntax.test file.
 
 # Conclusion
 

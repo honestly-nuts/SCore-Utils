@@ -1,0 +1,11 @@
+
+-- sgrep.py (sgrep [if you have ran the install script]) grep {input_file(s)} [-c]\
+-- sgrep.py (sgrep [if you have ran the install script]) grep
+
+start
+grep this grep bruh
+yes yes yes
+end
+
+-- output = grep this grep bruh
+-- output [-c] = 1
