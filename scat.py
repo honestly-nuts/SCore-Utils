@@ -1,12 +1,12 @@
 #! /bin/python3.8
 import sys
 
-def stdinCat():
+def stdin_cat():
     while True:
         text = input()
         sys.stdout.write(text)
 
-def fileCat(filename):
+def file_cat(filename):
     text = ""
     with open(filename, "r") as f:
         text += f.read()
@@ -14,11 +14,11 @@ def fileCat(filename):
 
 def cat():
     if len(sys.argv) <= 1:
-        stdinCat()
+        stdin_cat()
     elif len(sys.argv) >= 2:
         for filename in sys.argv:
             if filename != sys.argv[0]:
-                print(fileCat(filename))
+                print(file_cat(filename))
 
 
 if __name__ == '__main__':
