@@ -35,13 +35,13 @@ chmod +x install.sh
 ### If you want to contribute, here are some guidelines:
 
 #### 1. Error handling:
-  1. should check the length of sys.argv for errors at the ``` if __name__ == "__main__": ``` code block.
-  2. if you have too few or too many sys.arguments then you you should ```sys.stderr.out("Too many/few arguments")```.
-  3. you should always ``` sys.stderr.write("Usage: program_name arguments")```(not literally) after an error.
+  1. You should check the length of sys.argv for errors at the ``` if __name__ == "__main__": ``` code block.
+  2. If you have too few or too many sys.arguments then you should ```sys.stderr.out("Too many/few arguments")```.
+  3. You should always ``` sys.stderr.write("Usage: program_name arguments")```(not literally) after an error.
 #### 2. Styling
-  1. should use _ inbetween words (eg. grep_file).
-  2. make comments to explain what a line or block does
-  3. non-gibrish variable and function names.
+  1. You should use _ inbetween words (eg. grep_file).
+  2. You should make comments to explain what a line or block does
+  3. You should create non-gibrish variable and function names.
 
 # Conclusion
 
