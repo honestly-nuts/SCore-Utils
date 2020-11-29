@@ -12,67 +12,79 @@ def usage():
 
 
 def encode(wrap_cols):
+    # Read from stdin and convert it to bytes if no file is specified
     if len(sys.argv) == 1:
-        text = sys.stdin.readlines().encode
+        input_bytes = sys.stdin.readlines().encode
     else:
         with open(sys.argv[1], "rb") as file:
-            text = file.read()
+            input_bytes = file.read()
 
-    output = base64.b64encode(text).decode()
-    if wrap_cols == 0:
+    # Base 64 encode the bytes then turn the output into a string
+    output = base64.b64encode(input_bytes).decode()
+
+    # Write the output to stdout
+    if wrap_columns == 0:
         sys.stdout.write(output)
     else:
+        # Keep the output within the specified column width
         while output:
-            sys.stdout.write(output[:wrap_cols] + "\n")
-            output = output[wrap_cols:]
+            sys.stdout.write(output[:wrap_columns] + "\n")
+            output = output[wrap_columns:]
 
 
-def decode(wrap_cols, ignore_garbage=False):
+def decode(wrap_columns, ignore_garbage=False):
     if len(sys.argv) == 1:
-        text = sys.stdin.read().encode()
+        input_bytes = sys.stdin.read().encode()
     else:
         with open(sys.argv[1], "rb") as file:
-            text = file.read()
+            input_bytes = file.read()
 
     if ignore_garbage:
-        while text:
+        while input_bytes:
             try:
-                base64.b64decode(text[:24])
+                base64.b64decode(input_bytes[:24])
             except binascii.Error:
                 pass
-            text = text[24:]
+            input_bytes = input_bytes[24:]
     else:
-        output = base64.b64decode(text).decode()
+        output = base64.b64decode(input_bytes).decode()
 
-    if wrap_cols == 0:
+    if wrap_columns == 0:
         sys.stdout.write(output)
     else:
         while output:
-            sys.stdout.write(output[:wrap_cols] + "\n")
-            output = output[wrap_cols:]
+            sys.stdout.write(output[:wrap_columns] + "\n")
+            output = output[wrap_columns:]
 
 
 if __name__ == "__main__":
+    # Incorrect arguments
+    if len(sys.argv) > 5:
+        sys.stderr.out("Too many arguments")
+        sys.stderr.write("Usage: sbase64 [options] [file]")
+        sys.exit()
+
     if "--help" in sys.argv:
         usage()
         sys.exit()
 
+    # Set output width
     if "-c" in sys.argv:
         cols_index = sys.argv.index("-c")
         wrap_col_number = sys.argv[cols_index + 1]
         sys.argv.remove("-c")
         sys.argv.remove(wrap_col_number)
     else:
-        wrap_cols = 76
+        wrap_columns = 76
 
     if "-d" in sys.argv:
         sys.argv.remove("-d")
         if "-i" in sys.argv:
             sys.argv.remove("-i")
-            decode(wrap_cols, ignore_garbage=True)
+            decode(wrap_columns, ignore_garbage=True)
             sys.exit()
         else:
-            decode(wrap_cols)
+            decode(wrap_columns)
             sys.exit()
     else:
-        encode(wrap_cols)
+        encode(wrap_columns)
