@@ -31,6 +31,8 @@ note: only run the install script once or it will write a duplicate path in PATH
 chmod +x install.sh
 ./install.sh
 ```
+#### Then either restart your terminal or source your bashrc file with ```source ~/.bashrc```.
+
 # For the devs
 ### If you want to contribute, here are some guidelines:
 
