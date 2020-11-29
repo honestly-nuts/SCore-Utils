@@ -15,5 +15,3 @@ or both, then you may consider donating your juicy, yummy yummy code to this rep
 My email: honeastlynuts@gmail.com\n 
 
 yeah, I know that the honestly is misspleled but I like it (By that I mean I don't want to fix it).
-
-This project is far far from over. Here are the things we still have to implement in the currently implemented scuffed programs (sgrep.py).
