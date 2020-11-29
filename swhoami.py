@@ -3,15 +3,11 @@ import getpass
 import sys
 
 
-def usage():
-    print(
-        """Usage: whoami
-    Prints the curretn username."""
-    )
-
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        usage()
-    else:
-        sys.stdout.write(getpass.getuser() + "\n")
+        sys.stderr.write("Too many arguments!\n")
+        sys.stderr.write("Usage: swhoami\n")
+        sys.exit()
+
+    sys.stdout.write(getpass.getuser() + "\n")

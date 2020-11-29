@@ -39,12 +39,14 @@ if __name__ == '__main__':
                     print(len(text.split("\n")))
                     n_opt_defuse = True
                 else:
-                    print("Option not found")
+                    sys.stderr.write("Option not found\n")
+                    sys.exit()
 
             elif optlist == []:
-                print(grep_file(arg, sys.argv[1]))
+                sys.stdout.write(grep_file(arg, sys.argv[1]))
 
     else:
-        print("Usage: sgrep.py token file(s)")
+        sys.stderr.write("Too few arguments!\n")
+        sys.stderr.write("Usage: sgrep.py token file(s)\n")
         sys.exit()
 
