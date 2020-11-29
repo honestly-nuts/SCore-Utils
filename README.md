@@ -11,7 +11,7 @@ called, oh well)". If you are interested in this project or are just doing drugs
 or both, then you may consider donating your code to this repository.
 
 # How to install
-## Pre-requests
+#### Pre-requests
 ```
 1.python
 2.git
