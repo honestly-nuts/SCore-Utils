@@ -1,4 +1,6 @@
-# Scuffed-Utils
+# Intro
+
+## Scuffed-Utils
 
 This is the official repo for the infomous Scuffed-Utils project (I regret this name). 
 
@@ -29,6 +31,19 @@ note: only run the install script once or it will write a duplicate path in PATH
 chmod +x install.sh
 ./install.sh
 ```
+# For the devs
+### If you want to contribute, here are some guidelines:
+
+#### 1. Error handling:
+  1. should check the length of sys.argv at the ``` if __name__ == "__main__": ``` code block.
+  2. if you have too few or too many sys.arguments then you you should ```sys.stderr.out("Too many/few arguments")```.
+  3. you should always ``` sys.stderr.write("Usage: program_name arguments")```(not literally) after an error.
+#### 2. Styling
+  1. should use _ inbetween words (eg. grep_file).
+  2. make comments to explain what a line or block does
+  3. non-gibrish variable and function names.
+
+# Conclusion
 
 [*Very good documentation*](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab)
 
