@@ -35,7 +35,7 @@ chmod +x install.sh
 ### If you want to contribute, here are some guidelines:
 
 #### 1. Error handling:
-  1. should check the length of sys.argv at the ``` if __name__ == "__main__": ``` code block.
+  1. should check the length of sys.argv for errors at the ``` if __name__ == "__main__": ``` code block.
   2. if you have too few or too many sys.arguments then you you should ```sys.stderr.out("Too many/few arguments")```.
   3. you should always ``` sys.stderr.write("Usage: program_name arguments")```(not literally) after an error.
 #### 2. Styling
