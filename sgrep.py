@@ -11,13 +11,6 @@ def grep_file(f, token):
                 if word == token:
                     text += line
     return text
-def grep_file(token):
-    for i in sys.argv[2:]:
-        with open(i, "r") as fl:
-            for line in fl.read().split("\n"):
-                if token in line.split(" "):
-                    sys.stdout.write(line + "\n")
-
 
 def grep_stdin(token):
     for line in sys.stdin.read().split("\n"):
