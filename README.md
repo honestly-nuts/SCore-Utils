@@ -24,7 +24,7 @@ git clone https://github.com/honestly-nuts/Scuffed-Utils/
 ```bash
 cd Scuffed-Utils/
 ```
-#### Then, make the install script executable and run the install script:
+#### Then, make sure the install script is executable and run the install script:
 note: only run the install script once or it will write a duplicate path in PATH envirment variable.
 
 ```bash
