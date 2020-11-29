@@ -9,20 +9,20 @@ called, oh well)". If you are interested in this project or are just doing drugs
 or both, then you may consider donating your code to this repository.
 
 # How to install
-###Pre-requests
+## Pre-requests
 ```
 1.python
 2.git
 ```
-####First clone this repository to your desired place:
+#### First clone this repository to your desired place:
 ```bash
 git clone https://github.com/honestly-nuts/Scuffed-Utils"
 ```
-####Then, cd to the repository you cloned:
+#### Then, cd to the repository you cloned:
 ```bash
 cd Scuffed-Utils/
 ```
-####Then, make the install script executable and run the install script:
+#### Then, make the install script executable and run the install script:
 note: only run the install script once or it will write a duplicate path in PATH envirment variable.
 
 ```bash
