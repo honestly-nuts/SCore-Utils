@@ -18,7 +18,7 @@ or both, then you may consider donating your code to this repository.
 ```
 #### First clone this repository to your desired place:
 ```bash
-git clone https://github.com/honestly-nuts/Scuffed-Utils"
+git clone https://github.com/honestly-nuts/Scuffed-Utils/
 ```
 #### Then, cd to the repository you cloned:
 ```bash
