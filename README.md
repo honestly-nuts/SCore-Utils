@@ -48,9 +48,11 @@ chmod +x install.sh
   3. You should create non-gibrish variable and function names.
 #### 3. Program standards
   1. You should always make a test file in the tests directory for the devs to test your program.
-    Test files are manuals on which you can run [my preprocessor](https://github.com/honestly-nuts/TPP) on to generate a
+    Test files are manuals on which you can run [my preprocessor](https://github.com/honestly-nuts/TPP) on to generate an
     inputfile for your program. Read More about TPP [here](https://github.com/honestly-nuts/TPP/blob/master/README.md).
-    syntax guidelines are given in the tests/syntax.test file.
+    The syntax guidelines are given [here](https://github.com/honestly-nuts/TPP/blob/master/tests/syntax.test).
+    [here](https://github.com/honestly-nuts/TPP/blob/master/tests/example_programName.test) is an example test file for an **imaginary** program that does        
+    virtually nothing.
 
 # Conclusion
 
