@@ -3,7 +3,6 @@
 ## Scuffed-Utils
 
 <img src=https://github.com/honestly-nuts/Scuffed-Utils/blob/development/resources/scuffed_utils_light_very_logo.svg width=256 height=256>
-<img src=https://github.com/honestly-nuts/Scuffed-Utils/blob/development/resources/scuffed_utils_light_logo.svg width=256 height=256>
 
 This is the official repo for the infomous Scuffed-Utils project (I regret this name). 
 
