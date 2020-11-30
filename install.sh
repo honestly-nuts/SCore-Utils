@@ -14,3 +14,6 @@ mv scat.py ./bin/scat
 mv sgrep.py ./bin/sgrep
 mv syes.py ./bin/syes
 mv swhoami.py ./bin/swhoami
+mv sbase64.py ./bin/sbase64
+mv sls.py ./bin/sls
+mv sarch.py ./bin/sarch
