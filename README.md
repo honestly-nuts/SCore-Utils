@@ -7,8 +7,7 @@
 This is the official repo for the infomous Scuffed-Utils project (I regret this name). 
 
 The goal of this project is to remake the original gnu coreutils in python.  Why you 
-may ask? Honestly, I don't know. One day I just got this Idea that, "Why not make scuffed
-versions of the already great gnu coreutils programs (I still don't know what it is actually
+may ask? Honestly, I don't know. One day I just got this Idea that, "Why not make scuffed versions of the already great gnu coreutils programs (I still don't know what it is actually
 called, oh well)". If you are interested in this project or are just doing drugs (like I am)
 or both, then you may consider donating your code to this repository.
 
