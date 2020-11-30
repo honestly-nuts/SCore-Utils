@@ -7,9 +7,7 @@
 This is the official repo for the infamous Scuffed-Utils project (I regret this name). 
 
 The goal of this project is to remake the original gnu coreutils in python.  Why you 
-may ask? Honestly, I don't know. One day I just got this Idea that, "Why not make scuffed versions of the already great gnu coreutils programs (I still don't know what it is actually
-called, oh well)". If you are interested in this project or are just doing drugs (like I am)
-or both, then you may consider donating your code to this repository.
+may ask? Honestly, I don't know. One day I just got this Idea that, "Why not make scuffed versions of the already great gnu coreutils programs". If you are interested in this project, then you may consider donating your code to this repository.
 
 # How to install
 #### Pre-requests
@@ -32,7 +30,7 @@ note: only run the install script once or it will write a duplicate path in PATH
 chmod +x install.sh
 ./install.sh
 ```
-#### Then either restart your terminal or source your bashrc file with ```source ~/.bashrc```.
+#### Then either restart your terminal or source your bashrc file with ```source ~/.bashrc```. Then you are good to go.
 
 # For the devs
 
