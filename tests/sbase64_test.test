@@ -1,0 +1,20 @@
+synopsis:
+    sbase64.py (sbase64 [if you ran the installation script]) [-d] {input_file}
+    sbase64.py (sbase64 [if you ran the installation script]) {input_file}
+
+description:
+    sbase64.py encodes or decodes a file in base64
+
+--command
+>> {PATH_TO_SARCH} {file}
+abcdefghijklmnopqrstuvwxyz
+
+--command 
+>> {PATH_TO_SBASE64} -d {file}
+YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXoK
+
+--output
+>> YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXoK
+
+--output [-d]
+>> abcdefghijklmnopqrstuvwxyz

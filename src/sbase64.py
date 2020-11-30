@@ -32,7 +32,7 @@ def encode(wrap_cols):
             output = output[wrap_columns:]
 
 
-def decode(wrap_columns, ignore_garbage=False):
+def decode(wrap_columns, ignore_garbage):
     if len(sys.argv) == 1:
         input_bytes = sys.stdin.read().encode()
     else:
@@ -81,10 +81,9 @@ if __name__ == "__main__":
         sys.argv.remove("-d")
         if "-i" in sys.argv:
             sys.argv.remove("-i")
-            decode(wrap_columns, ignore_garbage=True)
-            sys.exit()
+            ignore_garbage = True
         else:
-            decode(wrap_columns)
-            sys.exit()
+            ignore_garbage = False
+        decode(wrap_columns, ignore_garbage)
     else:
         encode(wrap_columns)
