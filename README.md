@@ -2,7 +2,7 @@
 
 ## Scuffed-Utils
 
-![](./resources/scuffed_utils_light_very_logo.svg =32x32)
+![](https://github.com/honestly-nuts/Scuffed-Utils/resources/scuffed_utils_light_very_logo.svg =32x32)
 
 This is the official repo for the infomous Scuffed-Utils project (I regret this name). 
 
