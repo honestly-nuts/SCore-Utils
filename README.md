@@ -2,6 +2,8 @@
 
 ## Scuffed-Utils
 
+![](./resources/scuffed_utils_light_very_logo.svg =32x32)
+
 This is the official repo for the infomous Scuffed-Utils project (I regret this name). 
 
 The goal of this project is to remake the original gnu coreutils in python.  Why you 
@@ -46,8 +48,8 @@ chmod +x install.sh
   2. You should make comments to explain what a line or block does
   3. You should create non-gibrish variable and function names.
 #### 3. Program standards
-  1. You should always make a test file in the tests directory for the devs to test your program. Currently I am working on the preprocessor to convert these into a txt file which you can perform the program on.
-  Until then, just add them as tutorials. syntax guidelines are given in the test/syntax.test file.
+  1. You should always make a test file in the tests directory for the devs to test your program. Currently I am working on the preprocessor to genarate the txt files which you can perform the programs on.
+  Until the preprocessor is done, just add them as tutorials. syntax guidelines are given in the test/syntax.test file.
 
 # Conclusion
 
