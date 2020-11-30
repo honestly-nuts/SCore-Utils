@@ -50,7 +50,7 @@ chmod +x install.sh
 #### 3. Program standards
   1. You should always make a test file in the tests directory for the devs to test your program.
     Test files are manuals on which you can run [my preprocessor](https://github.com/honestly-nuts/TPP) on to generate a
-    inputfile for your program. Rad More about TPP [here](https://github.com/honestly-nuts/TPP/blob/master/README.md).
+    inputfile for your program. Read More about TPP [here](https://github.com/honestly-nuts/TPP/blob/master/README.md).
     syntax guidelines are given in the tests/syntax.test file.
 
 # Conclusion
