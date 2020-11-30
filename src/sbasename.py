@@ -15,7 +15,7 @@ def usage():
     )
 
 
-def strip(suffix, terminator):
+def extract_name(suffix, terminator):
     if "-a" in sys.argv:
         sys.argv.remove("-a")
         for path in sys.argv[1:]:
@@ -54,5 +54,5 @@ if __name__ == "__main__":
     else:
         terminator = "\n"
 
-    strip(suffix, terminator)
+    extract_name(suffix, terminator)
 
