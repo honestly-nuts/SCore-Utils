@@ -14,7 +14,7 @@ def usage():
 def encode(wrap_cols):
     # Read from stdin and convert it to bytes if no file is specified
     if len(sys.argv) == 1:
-        input_bytes = sys.stdin.readlines().encode
+        input_bytes = sys.stdin.read().encode
     else:
         with open(sys.argv[1], "rb") as file:
             input_bytes = file.read()
