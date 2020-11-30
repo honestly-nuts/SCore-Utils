@@ -47,8 +47,10 @@ chmod +x install.sh
   2. You should make comments to explain what a line or block does
   3. You should create non-gibrish variable and function names.
 #### 3. Program standards
-  1. You should always make a test file in the tests directory for the devs to test your program. Currently I am orking on the preprocessor to genarate the txt files which you can perform the programs on.
-  Until the preprocessor is done, just add them as tutorials. syntax guidelines are given in the test/syntax.test file.
+  1. You should always make a test file in the tests directory for the devs to test your program.
+    Test files are manuals on which you can run [my preprocessor](https://github.com/honestly-nuts/TPP) on to generate a
+    inputfile for your program. Read More about TPP [here](https://github.com/honestly-nuts/TPP/blob/master/README.md).
+    syntax guidelines are given in the tests/syntax.test file.
 
 # Conclusion
 
