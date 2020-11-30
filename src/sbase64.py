@@ -14,7 +14,7 @@ def usage():
 def encode(wrap_cols):
     # Read from stdin and convert it to bytes if no file is specified
     if len(sys.argv) == 1:
-        input_bytes = sys.stdin.read().encode
+        input_bytes = sys.stdin.read().encode()
     else:
         with open(sys.argv[1], "rb") as file:
             input_bytes = file.read()
@@ -53,7 +53,7 @@ def decode(wrap_columns, ignore_garbage):
         sys.stdout.write(output)
     else:
         while output:
-            sys.stdout.write(output[:wrap_columns] + "\n")
+            sys.stdout.write(output[:wrap_columns])
             output = output[wrap_columns:]
 
 
