@@ -4,7 +4,7 @@ import subprocess
 import sys
 
 
-class whoami_test(unittest.TestCase):
+class base64_test(unittest.TestCase):
     def test_encode(self):
         test_string = "abcdefghijklmnopqrstuvwxyz".encode()
         real_output = subprocess.run("base64", capture_output=True, input=test_string)
