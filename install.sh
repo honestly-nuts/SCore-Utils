@@ -5,7 +5,7 @@ if [[ -f ~/.bashrc ]]; then
 fi
 
 # I know theres better ways to do this but this works for now
-chmod +x *.py
+chmod +x ./src/*.py
 
 for FILE in ./src/*.py; do
     OUTPUT=${FILE#./}
