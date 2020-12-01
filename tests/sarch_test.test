@@ -1,0 +1,11 @@
+synopsis:
+    sarch.py (sarch [if you ran the installation script])
+
+description:
+    sarch.py prints the system architecture
+
+--command
+>> {PATH_TO_SARCH}
+
+--output
+>> x86_64
