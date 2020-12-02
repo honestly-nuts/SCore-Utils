@@ -1,16 +1,20 @@
 #! /bin/python3.8
 import sys
 
+
 def stdin_cat():
-    while True:
-        text = input()
-        sys.stdout.write(text)
+    for line in sys.stdin:
+        sys.stdout.write(line)
+
 
 def file_cat(filename):
-    text = ""
-    with open(filename, "r") as f:
-        text += f.read()
-    return text
+    try:
+        with open(filename, "r") as f:
+            for line in f:
+                sys.stdout.write(line)
+    except FileNotFoundError:
+        sys.stderr.write("File does not exist\n")
+
 
 def cat():
     if len(sys.argv) <= 1:
@@ -18,12 +22,8 @@ def cat():
     elif len(sys.argv) >= 2:
         for filename in sys.argv:
             if filename != sys.argv[0]:
-                print(file_cat(filename))
+                file_cat(filename)
 
 
-if __name__ == '__main__':
-    try:
-        cat()
-    except:
-        sys.stdout.write("\n")
-        pass
+if __name__ == "__main__":
+    cat()
