@@ -17,12 +17,14 @@ def file_cat(filename):
 
 
 def cat():
-    if len(sys.argv) <= 1:
-        stdin_cat()
-    elif len(sys.argv) >= 2:
-        for filename in sys.argv:
-            if filename != sys.argv[0]:
+    if len(sys.argv) >= 2:
+        for filename in sys.argv[1:]:
+            if filename == "-":
+                stdin_cat()
+            else:
                 file_cat(filename)
+    else:
+        stdin_cat()
 
 
 if __name__ == "__main__":
