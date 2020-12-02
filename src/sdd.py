@@ -32,7 +32,11 @@ def convert_file(options):
 
     if options["of"]:
         # TODO: oflags support
-        output_file = open(options["of"], "wb", buffering=0)
+        if "append" in options["oflag"] or "notrunc" in options["conv"]:
+            write_mode = "wb+"
+        else:
+            write_mode = "ab"
+        output_file = open(options["of"], write_mode, buffering=0)
     else:
         output_file = sys.stdout
 
@@ -43,16 +47,35 @@ def convert_file(options):
         in_bytes = options["ibs"]
         out_bytes = options["obs"]
 
-    input_file.seek(options["skip"])
-    if output_file.seekable():
-        output_file.seek(options["seek"])
+    if "skip_bytes" in options["iflag"]:
+        in_seek = options["skip"]
     else:
-        output_file.write("\0" * options["seek"])
+        in_seek = options["skip"] * in_bytes
+    input_file.seek(in_seek)
+
+    if "seek_bytes" in options["oflag"]:
+        out_seek = options["seek"]
+    else:
+        out_seek = options["seek"] * in_bytes
+
+    if output_file.seekable():
+        output_file.seek(out_seek)
+    else:
+        output_file.write("\0" * out_seek)
 
     if options["count"]:
-        for _ in range(options["count"]):
-            data = input_file.read(in_bytes)
+        if "count_bytes" in options["oflag"]:
+            count = options["count"]
+            while count > in_bytes:
+                data = input_file.read(in_bytes)
+                output_file.write(data)
+            data = input_file.read(count)
             output_file.write(data)
+        else:
+            for _ in range(options["count"]):
+                data = input_file.read(in_bytes)
+                output_file.write(data)
+
     else:
         while data := input_file.read(in_bytes):
             while data:
