@@ -24,10 +24,45 @@ def usage():
 
 
 def convert_file(options):
-    pass
+    if options["if"]:
+        # TODO: iflags support
+        input_file = open(options["if"], "rb", buffering=0)
+    else:
+        input_file = sys.stdin
+
+    if options["of"]:
+        # TODO: oflags support
+        output_file = open(options["of"], "wb", buffering=0)
+    else:
+        output_file = sys.stdout
+
+    if options["bs"] != 512:
+        in_bytes = options["bs"]
+        out_bytes = options["bs"]
+    else:
+        in_bytes = options["ibs"]
+        out_bytes = options["obs"]
+
+    input_file.seek(options["skip"])
+    if output_file.seekable():
+        output_file.seek(options["seek"])
+    else:
+        output_file.write("\0" * options["seek"])
+
+    if options["count"]:
+        for _ in range(options["count"]):
+            data = input_file.read(in_bytes)
+            output_file.write(data)
+    else:
+        while data := input_file.read(in_bytes):
+            while data:
+                segment = data[:out_bytes]
+                output_file.write(segment)
+                data = data[out_bytes:]
 
 
 if __name__ == "__main__":
+    # Default options
     options = {
         "bs": 512,
         "cbs": 512,
@@ -43,13 +78,14 @@ if __name__ == "__main__":
         "skip": 0,
     }
 
+    # Parse sys.argv
     index = 1
     while index < len(sys.argv):
         if "conv" in sys.argv[index]:
             _, flag = sys.argv[index].split("=")
             flags = [flag.strip(",")]
             index += 1
-            while index < len(sys.argv) and "=" not in sys.argv:
+            while index < len(sys.argv) and "," in sys.argv[index]:
                 flags.append(sys.argv[index].strip(","))
             options["conv"] = flags
 
@@ -57,7 +93,7 @@ if __name__ == "__main__":
             _, flag = sys.argv[index].split("=")
             flags = [flag.strip(",")]
             index += 1
-            while index < len(sys.argv) and "=" not in sys.argv:
+            while index < len(sys.argv) and "," in sys.argv[index]:
                 flags.append(sys.argv[index].strip(","))
             options["iflag"] = flags
 
@@ -74,4 +110,4 @@ if __name__ == "__main__":
             options[option] = value
         index += 1
 
-        convert_file(options)
+    convert_file(options)
