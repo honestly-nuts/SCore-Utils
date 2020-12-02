@@ -19,7 +19,10 @@ def file_cat(filename):
 def cat():
     if len(sys.argv) >= 2:
         for filename in sys.argv[1:]:
-            file_cat(filename)
+            if filename == "-":
+                stdin_cat()
+            else:
+                file_cat(filename)
     else:
         stdin_cat()
 
