@@ -20,41 +20,17 @@ def grep_stdin(token):
 
 
 if __name__ == '__main__':
-    optlist = []
 
     if len(sys.argv) == 2:
         grep_stdin(sys.argv[1])
     elif len(sys.argv) >= 3:
-        text = ""
-        for arg in sys.argv[1:]:
-            if re.findall(r"^-", arg) != []:
-                optlist.append(arg)
-
-        # to desable the options when executed once
-        n_opt_defuse = False
+        if "--help" in sys.argv:
+            sys.stdout.write("No help yet, Im too la<y\n")
+            sys.argv.remove("--help")
+            sys.exit()
 
         for arg in sys.argv[2:]:
-            if optlist != [] and arg not in optlist:
-                text += grep_file(arg, sys.argv[1])
-                
-                list_for_op_c = []
-
-                if "-c" in optlist:
-                    list_for_op_c.append(str(len(text.split("\n")) - 1))# The -1 is a temporary fix to the error that causes the count to be output++
-                    result = list_for_op_c[-1]
-
-                    for num in list_for_op_c[:-1]:
-                        result -= num
-
-                    sys.stdout.write(str(result))
-                    sys.stdout.write("\n")
-                    n_opt_defuse = True
-                else:
-                    sys.stderr.write("Option not found\n")
-                    sys.exit()
-
-            elif optlist == []:
-                sys.stdout.write(grep_file(arg, sys.argv[1]))
+            sys.stdout.write(grep_file(arg, sys.argv[1]))
 
     else:
         sys.stderr.write("Too few arguments!\n")
