@@ -1,0 +1,19 @@
+synopsis:
+    sbase64.py (sbase64 [if you ran the installation script]) [-d] {input_file}
+    sbase64.py (sbase64 [if you ran the installation script]) {input_file}
+
+description:
+    sbase64.py encodes or decodes a file in base64
+
+--command
+>> {PATH_TO_SARCH} {file]
+note by Honestly: TPP (the preprocessor) doesn't have multi start and end points so you have to sacrifice multi option genaration (don't worry, even i don't know what that means.)
+start
+abcdefghijklmnopqrstuvwxyz
+
+YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXoK
+end
+--output
+>> YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXoK
+
+>> abcdefghijklmnopqrstuvwxyz

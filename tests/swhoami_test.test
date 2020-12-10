@@ -1,0 +1,11 @@
+synopsis:
+    swhoami.py (swhoami [if you ran the install script])
+
+description:
+    Prints the name of the current user
+
+command:
+>> {PATH_TO_WHOAMI}
+
+output:
+>> {CURRENT_USER}

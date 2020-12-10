@@ -1,0 +1,23 @@
+synopsis:
+    sgrep.py (sgrep [if you have ran the install script]) token {input_file(s)} [-c]
+
+    sgrep.py (sgrep [if you have ran the install script]) token
+
+description:
+    sgrep.py is a program that searches patterns in text files or stdin.
+
+-- command 
+>> {PATH_TO_SGREP} grep {pro_file} [-c]
+start
+grep this grep bruh
+yes yes yes
+grep is the best
+end
+
+-- output
+>> grep this grep bruh
+>> grep this grep bruh
+>> grep is the best
+
+--output [-c]
+>> 3
