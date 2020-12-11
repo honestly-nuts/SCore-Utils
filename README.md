@@ -11,8 +11,8 @@ may ask? Honestly, I don't know. One day I just got this Idea that, "Why not mak
 
 # Advantages over the original
   1. Is easier to contribute to:
-    1. The original core-utils is written in c. And even though I **love** C as a language, I can't really say it is easy to work with. If you don't use an IDE, bulding
-    big projects is a pain in the *cough* *cough* (make I hate you). Theres where python comes in handy, Python is an **interpreted langage**. While it does impact its speed a little bit,
+    1. The original core-utils is written in c. And even though I **love** C as a language, I can't really say it is easy to work with. If you don't use an IDE, building
+    big projects is a pain in the *cough* *cough* (make I hate you). That's where python comes in handy, Python is an **interpreted language**. While it does impact its speed a little bit,
     comes with its advantages such as: platform independent, doesn't need to compile, etc. So no matter how many imports you have you just `./program` and it just works.
     Another advantage of python is that it's a very readable and semi-easy to learn language. So even if you don't know python but know other languages, you can easily modify the code after learning
     python over a weekend.
