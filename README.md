@@ -31,7 +31,7 @@ may ask? Honestly, I don't know. One day I just got this Idea that, "Why not mak
 1.python
 2.git
 ```
-#### First clone this repository to your desired place:
+#### First clone this repository in your desired place:
 ```bash
 git clone https://github.com/honestly-nuts/Scuffed-Utils/
 ```
@@ -40,7 +40,7 @@ git clone https://github.com/honestly-nuts/Scuffed-Utils/
 cd Scuffed-Utils/
 ```
 #### Then, make sure the install script is executable and run the install script:
-note: only run the install script once or it will write a duplicate path in PATH envirment variable.
+note: only run the install script once or it will write a duplicate path in PATH environment variable.
 
 ```bash
 chmod +x install.sh
