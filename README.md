@@ -9,6 +9,18 @@ This is the official repo for the infamous Scuffed-Utils project (I regret this 
 The goal of this project is to remake the original gnu coreutils in python.  Why you 
 may ask? Honestly, I don't know. One day I just got this Idea that, "Why not make scuffed versions of the already great gnu coreutils programs". If you are interested in this project, then you may consider donating your code to this repository.
 
+# Advantages over the original
+  1. Is easier to contribute to:
+    1. The original core-utils is written in c. And even though I **love** C as a language, I can't really say it is easy to work with. If you don't use an IDE, bulding
+    big projects is a pain in the *cough* *cough* (make I hate you). Theres where python comes in handy, Python is an **interpreted langage**. While it does impact its speed a little bit,
+    comes with its advantages such as: platform independent, doesn't need to compile, etc. So no matter how many imports you have you just `./program` and it just works.
+    Another advantage of python is that it's a very readable and semi-easy to learn language. So even if you don't know python but know other languages, you can easily modify the code after learning
+    python over a weekend.
+    2. contrary to popular belief, This is a small project. So if you notice a bug in a program or want to add your own implementation of a program or want to add a 
+    new program, there is a greater chance that your pull request will be accepted here than The original core-utils.
+  2. Modular:
+    1. All the programs used in this repository are designed to be flexible and fairly self-contained. So if you want to use any of the functions from a program, You can just import the program.
+
 # How to install
 #### Pre-requests
 ```
