@@ -54,8 +54,6 @@ chmod +x install.sh
 
 # Conclusion
 
-[*Very good documentation*](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab)
-
 My email: honeastlynuts@gmail.com 
 
 yeah, I know that the honestly is misspleled but I like it (By that I mean I don't want to fix it).
