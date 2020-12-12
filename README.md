@@ -4,10 +4,10 @@
 
 <img src=https://github.com/honestly-nuts/Scuffed-Utils/blob/development/resources/scuffed_utils_light_very_logo.svg width=256 height=256>
 
-This is the official repo for the infamous Scuffed-Utils project (I regret this name). 
+This is the official repo for the infamous Scuffed-Utils project (I regret this name).
 
-The goal of this project is to remake the original gnu coreutils in python.  Why you 
-may ask? Honestly, I don't know. One day I just got this Idea that, "Why not make scuffed versions of the already great gnu coreutils programs". If you are interested in this project, then you may consider donating your code to this repository.
+**Scuffed-Utils** is a remake of the original gnu coreutils in python. Why you may ask?
+To make America great again! JK, it is to make a modular utility package that people can use as a library. And also to make modifying the programs a lot easier cus python
 
 
 # Advantages over the original
