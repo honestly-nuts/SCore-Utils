@@ -7,8 +7,7 @@
 This is the official repo for the infamous Scuffed-Utils project (I regret this name).
 
 **Scuffed-Utils** is a remake of the original gnu coreutils in python. Why you may ask?
-To make America great again! JK, it is to make a modular utility package that people can use as a library. And also to make modifying the programs a lot easier cus python
-
+To make America great again! JK, it is to make a modular utility package that people can use as a library. And also to make modifying the programs a lot easier.
 
 # Advantages over the original
   1. Is easier to contribute to:
