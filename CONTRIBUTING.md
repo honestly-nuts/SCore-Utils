@@ -15,3 +15,13 @@
     The syntax guidelines are given [here](https://github.com/honestly-nuts/TPP/blob/master/tests/syntax.test).
     [here](https://github.com/honestly-nuts/TPP/blob/master/tests/example_programName.test) is an example test file for an **imaginary** program that does        
     virtually nothing.
+
+## Did not fit in any sections:
+  1. I suggest you to stick to the standard library if you can. But if you can't then you should list how to install the library in the requirments subsection in 
+  the [readme](https://github.com/honestly-nuts/Scuffed-Utils/blob/development/README.md) like so:
+  
+    python
+     - Library name: command to install it (eg. pip[3] install library)
+    git
+    
+Feel free to suggest guidelines that you think should be in here but are not because I have a brain that has a size of -1 units;
