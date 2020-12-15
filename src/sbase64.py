@@ -2,16 +2,10 @@
 import sys
 import base64
 import binascii
+import argparse
 
 
-def usage():
-    print(
-        """Usage: sbase64 [option] [file]
-    Base64 encode or decode a file or standard input or output."""
-    )
-
-
-def encode(wrap_cols):
+def encode(wrap_columns):
     # Read from stdin and convert it to bytes if no file is specified
     if len(sys.argv) == 1:
         input_bytes = sys.stdin.read().encode()
@@ -58,32 +52,26 @@ def decode(wrap_columns, ignore_garbage):
 
 
 if __name__ == "__main__":
-    # Incorrect arguments
-    if len(sys.argv) > 5:
-        sys.stderr.out("Too many arguments")
-        sys.stderr.write("Usage: sbase64 [options] [file]")
-        sys.exit()
+    parser = argparse.ArgumentParser(
+        description="base64 encodes or decodes a file or standard input"
+    )
+    parser.add_argument(
+        "-w", "--wrap-cols", type=int, default=76, help="wrap encoded line after COLS"
+    )
+    parser.add_argument(
+        "-d", "--decode", action="store_true", help="Decodes base64 to text"
+    )
+    parser.add_argument(
+        "-i",
+        "--ignore-garbage",
+        action="store_true",
+        default=False,
+        help="when decoding, ignore non-alphabet characters",
+    )
 
-    if "--help" in sys.argv:
-        usage()
-        sys.exit()
+    args = parser.parse_args()
 
-    # Set output width
-    if "-c" in sys.argv:
-        cols_index = sys.argv.index("-c")
-        wrap_col_number = sys.argv[cols_index + 1]
-        sys.argv.remove("-c")
-        sys.argv.remove(wrap_col_number)
+    if args.decode:
+        decode(args.wrap_cols, args.ignore_garbage)
     else:
-        wrap_columns = 76
-
-    if "-d" in sys.argv:
-        sys.argv.remove("-d")
-        if "-i" in sys.argv:
-            sys.argv.remove("-i")
-            ignore_garbage = True
-        else:
-            ignore_garbage = False
-        decode(wrap_columns, ignore_garbage)
-    else:
-        encode(wrap_columns)
+        encode(args.wrap_cols)
