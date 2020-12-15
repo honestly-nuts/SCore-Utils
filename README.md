@@ -2,12 +2,27 @@
 
 ## Scuffed-Utils
 
-<img src=https://github.com/honestly-nuts/Scuffed-Utils/blob/development/resources/scuffed_utils_light_very_logo.svg width=256 height=256>
+<img src=https://github.com/honestly-nuts/Scuffed-Utils/blob/development/resources/scuffed_utils_dark_logo_python_scheme.svg width=256 height=256>
 
-This is the official repo for the infamous Scuffed-Utils project (I regret this name). 
+This is the official repo for the infamous Scuffed-Utils project (I regret this name).
 
-The goal of this project is to remake the original gnu coreutils in python.  Why you 
-may ask? Honestly, I don't know. One day I just got this Idea that, "Why not make scuffed versions of the already great gnu coreutils programs". If you are interested in this project, then you may consider donating your code to this repository.
+**Scuffed-Utils** is a remake of the original gnu coreutils in python. Why you may ask?
+To make America great again! JK, it is to make a modular utility package that people can use as a library. And also to make modifying the programs a lot easier.
+
+# Advantages over the original
+  1. Is easier to contribute to:
+
+     1. The original core-utils is written in c. And even though I **love** C as a language, I can't really say it is easy to work with. If you don't use an IDE, building
+    big projects is a pain in the *cough* *cough* (make I hate you). That's where python comes in handy, Python is an **interpreted language**. While it does impact its speed a little bit,
+    comes with its advantages such as: platform independent, doesn't need to compile, etc. So no matter how many imports you have you just `./program` and it just works.
+    Another advantage of python is that it's a very readable and semi-easy to learn language. So even if you don't know python but know other languages, you can easily modify the code after learning
+    python over a weekend.
+
+     2. contrary to popular belief, This is a small project. So if you notice a bug in a program or want to add your own implementation of a program or want to add a 
+    new program, there is a greater chance that your pull request will be accepted here than The original core-utils.
+
+  2. Modular:
+     1. All the programs used in this repository are designed to be flexible and fairly self-contained. So if you want to use any of the functions from a program, You can just import the program.
 
 # How to install
 #### Pre-requests
@@ -15,7 +30,7 @@ may ask? Honestly, I don't know. One day I just got this Idea that, "Why not mak
 1.python
 2.git
 ```
-#### First clone this repository to your desired place:
+#### First clone this repository in your desired place:
 ```bash
 git clone https://github.com/honestly-nuts/Scuffed-Utils/
 ```
@@ -24,7 +39,7 @@ git clone https://github.com/honestly-nuts/Scuffed-Utils/
 cd Scuffed-Utils/
 ```
 #### Then, make sure the install script is executable and run the install script:
-note: only run the install script once or it will write a duplicate path in PATH envirment variable.
+note: only run the install script once or it will write a duplicate path in PATH environment variable.
 
 ```bash
 chmod +x install.sh
@@ -34,27 +49,9 @@ chmod +x install.sh
 
 # For the devs
 
-### If you want to contribute, here are some guidelines:
-
-#### 1. Error handling:
-  1. You should check the length of sys.argv for errors at the ``` if __name__ == "__main__": ``` code block.
-  2. If you have too few or too many sys.arguments then you should ```sys.stderr.out("Too many/few arguments")```.
-  3. You should always ``` sys.stderr.write("Usage: program_name arguments")```(not literally) after an error.
-#### 2. Styling
-  1. You should use _ inbetween words (eg. grep_file).
-  2. You should make comments to explain what a line or block does
-  3. You should create non-gibrish variable and function names.
-#### 3. Program standards
-  1. You should always make a test file in the tests directory for the devs to test your program.
-    Test files are manuals on which you can run [my preprocessor](https://github.com/honestly-nuts/TPP) on to generate an
-    inputfile for your program. Read More about TPP [here](https://github.com/honestly-nuts/TPP/blob/master/README.md).
-    The syntax guidelines are given [here](https://github.com/honestly-nuts/TPP/blob/master/tests/syntax.test).
-    [here](https://github.com/honestly-nuts/TPP/blob/master/tests/example_programName.test) is an example test file for an **imaginary** program that does        
-    virtually nothing.
+## read [this](https://github.com/honestly-nuts/Scuffed-Utils/blob/development/CONTRIBUTING.md) for contribution guidlines
 
 # Conclusion
-
-[*Very good documentation*](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab)
 
 My email: honeastlynuts@gmail.com 
 
