@@ -2,7 +2,7 @@
 
 ## Scuffed-Utils
 
-<img src=https://github.com/honestly-nuts/Scuffed-Utils/blob/development/resources/scuffed_utils_dark_logo_python_scheme.svg width=256 height=256>
+<img src=https://github.com/honestly-nuts/Scuffed-Utils/blob/development/resources/scuffed_utils_dark_logo_python_scheme.svg width=300 height=280>
 
 This is the official repo for the infamous Scuffed-Utils project (I regret this name).
 
