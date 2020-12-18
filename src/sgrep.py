@@ -2,7 +2,6 @@
 import sys
 import re
 
-
 def grep_file(f, token):
     text = ""
     with open(f, "r") as fl:
@@ -21,16 +20,25 @@ def grep_stdin(token):
 
 if __name__ == '__main__':
 
+    has_invalid_option = False
+    has_exucuted_another_option = False
+
     if len(sys.argv) == 2:
         grep_stdin(sys.argv[1])
+
     elif len(sys.argv) >= 3:
+
         if "--help" in sys.argv:
             sys.stdout.write("No help yet, Im too la<y\n")
             sys.argv.remove("--help")
             sys.exit()
+        elif "-E" in sys.argv:
+            " for backwords compatibility "
+            sys.argv.remove("-E")
 
-        for arg in sys.argv[2:]:
-            sys.stdout.write(grep_file(arg, sys.argv[1]))
+        if not has_invalid_option or has_exucuted_another_option:
+            for arg in sys.argv[2:]:
+                sys.stdout.write(grep_file(arg, sys.argv[1]))
 
     else:
         sys.stderr.write("Too few arguments!\n")
