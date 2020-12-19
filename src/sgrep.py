@@ -12,7 +12,12 @@ def grep_file(f, token):
                     text += "\n"
     return text
 
+def grep_file_using_ragex(f, token):
+    with open(f, "r") as fl:
+        return re.findall(token, fl.read())
+
 def grep_stdin(token):
+
     for line in sys.stdin.read().split("\n"):
         if token in line.split(" "):
             sys.stdout.write(line + "\n")
@@ -31,7 +36,9 @@ if __name__ == '__main__':
         if "--help" in sys.argv:
             sys.stdout.write("No help yet, Im too la<y\n")
             sys.argv.remove("--help")
-            sys.exit()
+
+            has_exucuted_another_option = True
+
         elif "-E" in sys.argv:
             " for backwords compatibility "
             sys.argv.remove("-E")
@@ -39,9 +46,14 @@ if __name__ == '__main__':
         if not has_invalid_option or has_exucuted_another_option:
             for arg in sys.argv[2:]:
                 sys.stdout.write(grep_file(arg, sys.argv[1]))
+                # sys.stdout.write("\n".join(grep_file_using_ragex(arg, sys.argv[1])))
+                
+        else:
+            sys.exit()
 
     else:
         sys.stderr.write("Too few arguments!\n")
         sys.stderr.write("Usage: sgrep.py token file(s)\n")
+
         sys.exit()
 
