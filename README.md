@@ -1,5 +1,4 @@
 # Intro
-
 ## Scuffed-Utils
 
 <img src=https://github.com/honestly-nuts/Scuffed-Utils/blob/development/resources/scuffed_utils_dark_logo_python_scheme.svg width=300 height=280>
@@ -24,6 +23,15 @@ To make America great again! JK, it is to make a modular utility package that pe
   2. Modular:
      1. All the programs used in this repository are designed to be flexible and fairly self-contained. So if you want to use any of the functions from a program, You can just import the program.
 
+### Why, just Why should you use this.
+While these programs are not an improvement in functionality from the original programs (they do the same thing). But when it comes to reading the source code and 
+source code modification, I think we can agree this is much better. Again, This is not an replacement for the original programs. This project tends to be useful
+for programmers and tinkeres. if you want to make your own customized version of 'ls' but don't want to code it from scratch, for the original programs you have to
+download the source code and then modify it and then compile it and **wait** you just got five hundred errors because you forgot to modify the header files.
+But if you use these programs and want to customize the sls program. Just go to the $Location/bin/ folder and modify the code and it's that easy. AND I know python
+is slower and stuff but on mordern computers it hardly makes a difference given the size of these programs. And even after that you don't find it useful then just don't
+use it. It's not like I'm holding you at gun point.
+
 # How to install
 #### Pre-requests
 ```
@@ -46,6 +54,12 @@ chmod +x install.sh
 ./install.sh
 ```
 #### Then either restart your terminal or source your bashrc file with ```source ~/.bashrc```. Then you are good to go.
+
+## But what about windows.
+
+well If you are on windows, I recommend you to use gitbash. I'm not completely sure that the install.sh will work on gitbash, if so then add the path of the  
+src folder in the environment path variable. while this works, you have to type "program.py" instead of "program". So I'm looking into making a bat script. 
+If anyone is on windows, please help me out.
 
 # For the devs
 
