@@ -1,5 +1,6 @@
 #! /bin/python3.8
 import sys
+import os
 import re
 
 def grep_file(f, token):
@@ -13,8 +14,14 @@ def grep_file(f, token):
     return text
 
 def grep_file_using_ragex(f, token):
+    text = []
     with open(f, "r") as fl:
-        return re.findall(token, fl.read())
+        for line in fl.read().split("\n"):
+            if re.findall(token, line) == []:
+                continue
+            else:
+                text.append(line)
+    return text
 
 def grep_stdin(token):
 
@@ -28,6 +35,7 @@ if __name__ == '__main__':
     has_invalid_option = False
     has_exucuted_another_option = False
 
+    # invalid args error
     if len(sys.argv) == 2:
         grep_stdin(sys.argv[1])
 
@@ -45,8 +53,9 @@ if __name__ == '__main__':
 
         if not has_invalid_option or has_exucuted_another_option:
             for arg in sys.argv[2:]:
-                sys.stdout.write(grep_file(arg, sys.argv[1]))
-                # sys.stdout.write("\n".join(grep_file_using_ragex(arg, sys.argv[1])))
+                if os.path.exists(arg): # no file named {} error
+                    # sys.stdout.write(grep_file(arg, sys.argv[1]))
+                    print("\n".join(grep_file_using_ragex(arg, sys.argv[1])))
                 
         else:
             sys.exit()
