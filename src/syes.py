@@ -1,18 +1,8 @@
 #! /usr/bin/python3
 import sys
 
-def main():
-    buf = "y"
-    if len(sys.argv) >= 2:
-        buf = ""
-        for arg in sys.argv:
-            if arg != sys.argv[0]:
-                if arg != sys.argv[1]:
-                    buf += " "
-                buf += arg
-
-    while True:
-        print(buf)
+def yes(buf="y"):
+    sys.stdout.write(buf + "\n")
 
 if __name__ == "__main__":
     if len(sys.argv) > 2:
@@ -20,4 +10,13 @@ if __name__ == "__main__":
         sys.stderr.write("Usage: syes (string)\n")
         sys.exit()
 
-    main()
+    if len(sys.argv) == 1:
+        buf = "y"
+    else:
+        buf = sys.argv[1]
+
+    try:
+        while True:
+            yes(buf)
+    except KeyboardInterrupt:
+        sys.exit()
