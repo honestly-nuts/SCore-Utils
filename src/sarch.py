@@ -3,10 +3,16 @@ import sys
 
 
 def usage():
-    print(
-        """Usage: arch
-    Prints operating system architecture"""
-    )
+    """
+    Writes the usage string to stdout.
+    """
+    # this isn't a pretty string, but this way it is the easiest to understand how it will look in a terminal
+    sys.stdout.write(
+"""Usage: arch [OPTION]...
+Print machine architecture.
+
+      --help     display this help and exit
+      --version  output version information and exit""")
 
 
 if __name__ == "__main__":
@@ -16,8 +22,4 @@ if __name__ == "__main__":
         sys.stderr.out("Too many arguments")
         sys.stderr.write("Usage: sarch")
     else:
-        # Determine system architecture using the max integer size
-        if sys.maxsize > 2 ** 32:
-            sys.stdout.write("x86_64\n")
-        else:
-            sys.stdout.write("x86\n")
+        # it's important to use `platform.machine()` in order to have better support in different archs
