@@ -1,23 +1,43 @@
 #! /usr/bin/python3
 import sys
+import platform
 
 
-def usage():
-    print(
-        """Usage: arch
-    Prints operating system architecture"""
-    )
+def get_version_string():
+    """
+    Returns the version string.
+    """
+    return "sarch 1.0.0\n"
+
+
+def get_usage_string():
+    """
+    Returns the usage string.
+    """
+    # this isn't a pretty string, but this way it is the easiest to understand how it will look in a terminal
+    return """Usage: sarch [OPTION]...
+Print machine architecture.
+
+      --help     display this help and exit
+      --version  output version information and exit\n"""
+
+
+def main():
+    """
+    The file entry point on runs (not imports).
+    """
+    if 1 == len(sys.argv):
+        # it's important to use `platform.machine()` in order to have better support in different archs
+        sys.stdout.write(platform.machine())
+    else:
+        if "--help" in sys.argv[1:]:
+            sys.stdout.write(get_usage_string())
+        elif "--version" in sys.argv[1:]:
+            sys.stdout.write(get_version_string())
+        else:  # unrecognized option
+            sys.stderr.write(f"sarch: extra operand {sys.argv[1]}\n"
+                             f"Try 'sarch --help' for more information.\n")
 
 
 if __name__ == "__main__":
-    if "--help" in sys.argv:
-        usage()
-    elif len(sys.argv) > 1:
-        sys.stderr.out("Too many arguments")
-        sys.stderr.write("Usage: sarch")
-    else:
-        # Determine system architecture using the max integer size
-        if sys.maxsize > 2 ** 32:
-            sys.stdout.write("x86_64\n")
-        else:
-            sys.stdout.write("x86\n")
+    main()
