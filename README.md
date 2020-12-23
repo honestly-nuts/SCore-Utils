@@ -1,11 +1,11 @@
 # Intro
-## Scuffed-Utils ( working name )
+## SCore-Utils ( working name )
 
 <img src=https://github.com/honestly-nuts/Scuffed-Utils/blob/development/resources/scuffed_utils_dark_logo_python_scheme.svg width=300 height=280>
 
 This is the official repo for the infamous Scuffed-Utils project (I regret this name).
 
-**Scuffed-Utils** is a remake of the original gnu coreutils in python. Why you may ask?
+**SCore-Utils** is a remake of the original gnu coreutils in python. Why you may ask?
 To make America great again! JK, it is to make a modular utility package that people can use as a library. And also to make modifying the programs a lot easier.
 
 # Advantages over the original
@@ -40,11 +40,11 @@ use it. It's not like I'm holding you at gun point.
 ```
 #### First clone this repository in your desired place:
 ```bash
-git clone https://github.com/honestly-nuts/Scuffed-Utils/
+git clone https://github.com/honestly-nuts/SCore-Utils/
 ```
 #### Then, cd to the repository you cloned:
 ```bash
-cd Scuffed-Utils/
+cd SCore-Utils/
 ```
 #### Then, make sure the install script is executable and run the install script:
 note: only run the install script once or it will write a duplicate path in PATH environment variable.
@@ -63,7 +63,7 @@ If anyone is on windows, please help me out.
 
 # For the devs
 
-## read [this](https://github.com/honestly-nuts/Scuffed-Utils/blob/development/CONTRIBUTING.md) for contribution guidlines
+## read [this](https://github.com/honestly-nuts/SCore-Utils/blob/development/CONTRIBUTING.md) for contribution guidlines
 
 # Conclusion
 
