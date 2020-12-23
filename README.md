@@ -3,7 +3,7 @@
 
 <img src=https://github.com/honestly-nuts/Scuffed-Utils/blob/development/resources/scuffed_utils_dark_logo_python_scheme.svg width=300 height=280>
 
-This is the official repo for the infamous Scuffed-Utils project (I regret this name). \# this is a legacy line to remind me of my roots \#
+ \# this is a legacy line to remind me of my roots \# This is the official repo for the infamous Scuffed-Utils project (I regret this name).
 
 **SCore-Utils** is a remake of the original gnu coreutils in python. The goal of this project is to make a modular utility package that people can use as a library and to make modifying the programs a lot easier.
 
