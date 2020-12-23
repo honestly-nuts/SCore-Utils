@@ -26,4 +26,5 @@
     
 Feel free to suggest guidelines that you think should be in here but are not because I have a brain that has a size of -1 units;
 
-[Here's the trello board for this project.](https://trello.com/invite/b/d7KbCuUN/216104d5bd17c6032b142875dc14d561/scuffed-utils)
+[Here's the trello board for this project. (inactive)](https://trello.com/invite/b/d7KbCuUN/216104d5bd17c6032b142875dc14d561/scuffed-utils)
+[Here's the github board for this project.](https://github.com/honestly-nuts/Scuffed-Utils/projects)
