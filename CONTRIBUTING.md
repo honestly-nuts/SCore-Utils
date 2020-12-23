@@ -1,3 +1,12 @@
+### Code structor:
+#### resources/:
+  The resources directory is for resources that the repository itself is dependent on. It contains mostly images for the readme.
+#### src/:
+  The src directory is for the source files of the project. All code goes here (with nuances).
+#### tests/:
+  The tests directory contains unit tests for all the programs. It also containes source files for the [TPP pre processor](https://github.com/honestly-nuts/TPP)
+  but I don't force that anymore because I know it isn't the most convenient way to make a test file and It was a experimental Idea anyway. :)
+
 ### If you want to contribute, here are some guidelines:
 
 #### 1. Error handling:
