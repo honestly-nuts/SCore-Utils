@@ -4,7 +4,7 @@ import platform
 
 from common import *
 
-HELP_MESSAGE = """Usage: uname [OPTION]...
+HELP_MESSAGE = """Usage: suname [OPTION]...
 Print certain system information.  With no OPTION, same as -s.
 
   -a, --all                print all information, in the following order,
