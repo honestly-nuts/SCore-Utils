@@ -9,6 +9,7 @@ Print machine architecture.
 
       --help     display this help and exit"""
 
+
 def main():
     """
     The file entry point on runs (not imports).
