@@ -20,7 +20,7 @@ def main():
         if "--help" in sys.argv[1:]:
             write_out(get_usage_string())
         else:  # unrecognized option
-            handle_errors()
+            handle_error_args()
             return 1
     return 0
 

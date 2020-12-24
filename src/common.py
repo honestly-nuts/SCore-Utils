@@ -6,7 +6,7 @@ FULL_ARG_PREFIX = "--"
 SHORT_ARG_PREFIX = "-"
 
 
-def _get_command_name():
+def _get_command_name() -> str:
     """
     This is a special utility function. 
     since it should only be called in `handle_errors`, it goes 3 calls up to call chain:
@@ -45,15 +45,20 @@ def write_err(string: str, end: str = "\n"):
     sys.stderr.flush()
 
 
-def handle_errors():
+def handle_error_args(arg_list: list = sys.argv[1:]):
     """
     An implementation of basic error handling to print the correct error message for each case.
+    :param arg_list: list of arguments (not including the file name)
     """
     command_name = _get_command_name()
-    if sys.argv[1].startswith(FULL_ARG_PREFIX):
-        write_out(f"{command_name}: unrecognized option '{sys.argv[1]}'")
-    elif sys.argv[1].startswith("-") and 1 < len(sys.argv[1]):
-        write_out(f"{command_name}: invalid option -- '{sys.argv[1][1:]}'")
+    
+    if 0 == len(arg_list):  # nothing to handle
+        return
+
+    if arg_list[0].startswith(FULL_ARG_PREFIX):
+        write_out(f"{command_name}: unrecognized option '{arg_list[0]}'")
+    elif arg_list[0].startswith("-") and SHORT_ARG_PREFIX != arg_list[0]:
+        write_out(f"{command_name}: invalid option -- '{arg_list[0][1:]}'")
     else:
-        write_out(f"{command_name}: extra operand '{sys.argv[1]}'")
+        write_out(f"{command_name}: extra operand '{arg_list[0]}'")
     write_out(f"Try '{command_name} --help' for more information.")

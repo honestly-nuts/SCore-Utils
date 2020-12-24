@@ -46,7 +46,7 @@ def main():
             write_out(platform.system())
             return 0
         else:
-            handle_errors()
+            handle_error_args()
             return 1
 
     if "-s" in sys.argv[1:] or "--kernel-name" in sys.argv[1:]:
@@ -81,7 +81,7 @@ def main():
         write_out("")  # to add the newline
 
     else:  # handle errors
-        handle_errors() 
+        handle_error_args() 
         return 1
     
     return 0
