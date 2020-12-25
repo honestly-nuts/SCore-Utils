@@ -2,42 +2,29 @@
 import sys
 import platform
 
+from common import *
 
-def get_version_string():
-    """
-    Returns the version string.
-    """
-    return "sarch 1.0.0\n"
-
-
-def get_usage_string():
-    """
-    Returns the usage string.
-    """
-    # this isn't a pretty string, but this way it is the easiest to understand how it will look in a terminal
-    return """Usage: sarch [OPTION]...
+HELP_MESSAGE = """Usage: sarch [OPTION]...
 Print machine architecture.
 
-      --help     display this help and exit
-      --version  output version information and exit\n"""
+      --help     display this help and exit"""
 
 
 def main():
     """
     The file entry point on runs (not imports).
     """
-    if 1 == len(sys.argv):
+    if 1 == len(sys.argv) or FULL_ARG_PREFIX == sys.argv[1]:
         # it's important to use `platform.machine()` in order to have better support in different archs
-        sys.stdout.write(platform.machine())
+        write_out(platform.machine())
     else:
         if "--help" in sys.argv[1:]:
-            sys.stdout.write(get_usage_string())
-        elif "--version" in sys.argv[1:]:
-            sys.stdout.write(get_version_string())
+            write_out(get_usage_string())
         else:  # unrecognized option
-            sys.stderr.write(f"sarch: extra operand {sys.argv[1]}\n"
-                             f"Try 'sarch --help' for more information.\n")
+            handle_error_args()
+            return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    exit(main())
