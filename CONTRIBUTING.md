@@ -13,8 +13,6 @@
 ### branches:
 ####   1. master: sacred branch that is the most stable
 ####   2. development (default) : unstable branch with the latest cutting edge technologies
-####   3. tmp:
-#####     1. colors: everything colors, is a little ahead from development but gets merged with development very quickly 
 
 ### If you want to contribute, here are some guidelines:
 
