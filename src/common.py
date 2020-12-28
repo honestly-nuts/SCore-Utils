@@ -5,6 +5,20 @@ import inspect
 FULL_ARG_PREFIX = "--"
 SHORT_ARG_PREFIX = "-"
 
+class Color:
+    def __init__(self):
+        self.FGCOLORS = {
+            "BLACK" : "\033[0;30m",
+            "RED" : "\033[0;31m",
+            "GREEN" : "\033[0;32m",
+            "BROWN" : "\033[0;33m",
+            "BLUE" : "\033[0;34m",
+            "ENDSTYLE" : "\033[0m"
+        }
+
+    # if you don't know what : str means then it means that the argument passed should be a str else raise an erro.
+    def setfgcolor(self, text : str, colorName : str):
+        return self.FGCOLORS[colorName] + text + self.FGCOLORS["ENDSTYLE"]
 
 def _get_command_name() -> str:
     """
@@ -43,22 +57,3 @@ def write_err(string: str, end: str = "\n"):
     sys.stderr.write(string)
     sys.stderr.write(end)
     sys.stderr.flush()
-
-
-def handle_error_args(arg_list: list = sys.argv[1:]):
-    """
-    An implementation of basic error handling to print the correct error message for each case.
-    :param arg_list: list of arguments (not including the file name)
-    """
-    command_name = _get_command_name()
-    
-    if 0 == len(arg_list):  # nothing to handle
-        return
-
-    if arg_list[0].startswith(FULL_ARG_PREFIX):
-        write_out(f"{command_name}: unrecognized option '{arg_list[0]}'")
-    elif arg_list[0].startswith("-") and SHORT_ARG_PREFIX != arg_list[0]:
-        write_out(f"{command_name}: invalid option -- '{arg_list[0][1:]}'")
-    else:
-        write_out(f"{command_name}: extra operand '{arg_list[0]}'")
-    write_out(f"Try '{command_name} --help' for more information.")

@@ -3,6 +3,8 @@ import sys
 import os
 import re
 
+from common import Color
+
 def grep_file(f, token):
     text = ""
     with open(f, "r") as fl:
@@ -15,12 +17,18 @@ def grep_file(f, token):
 
 def grep_file_using_ragex(f, token):
     text = []
+    col = Color()
+
     with open(f, "r") as fl:
         for line in fl.read().split("\n"):
-            if re.findall(token, line) == []:
-                continue
-            else:
-                text.append(line)
+            found = re.findall(token, line)
+            if found:
+                text.append(line[0:line.find(token)] + col.setfgcolor(token, "RED") + line[line.find(token) + len(token):])
+
+            if len(found) >= 1:
+                # buffer for add color for lines that contain same token more than once
+                pass
+
     return text
 
 def grep_stdin(token):
