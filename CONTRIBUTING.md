@@ -7,6 +7,15 @@
   The tests directory contains unit tests for all the programs. It also containes source files for the [TPP pre processor](https://github.com/honestly-nuts/TPP)
   but I don't force that anymore because I know it isn't the most convenient way to make a test file and It was a experimental Idea anyway. :)
 
+### Important files:
+  1. common.py: the file that contains common functions and classes (eg. write_err, Color)
+
+### branches:
+####   1. master: sacred branch that is the most stable
+####   2. development (default) : unstable branch with the latest cutting edge technologies
+####   3. tmp:
+#####     1. colors: everything colors, is a little ahead from development but gets merged with development very quickly 
+
 ### If you want to contribute, here are some guidelines:
 
 #### 1. Error handling:
