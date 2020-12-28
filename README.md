@@ -64,8 +64,12 @@ If anyone is on windows, please help me out.
 
 ## read [this](https://github.com/honestly-nuts/SCore-Utils/blob/development/CONTRIBUTING.md) for contribution guidlines
 
-# Conclusion
+# epilogue
 
-My email: honeastlynuts@gmail.com 
+My email: honeastlynuts@gmail.com
 
-yeah, I know that the honestly is misspleled but I like it (By that I mean I don't want to fix it).
+My twitter: [@Honestly__nuts](https://twitter.com/Honestly__nuts) for info on updates and other interactive stuff
+
+My reddit: [u/Honestly__nuts](https://www.reddit.com/user/Honestly__nuts) for the same stuff
+
+My discord: Honestly Nuts#0864 for the same stuff as well
