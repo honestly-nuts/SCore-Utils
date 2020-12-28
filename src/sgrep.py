@@ -1,4 +1,5 @@
 #! /usr/bin/python3
+
 import sys
 import os
 import re
@@ -23,12 +24,7 @@ def grep_file_using_ragex(f, token):
         for line in fl.read().split("\n"):
             found = re.findall(token, line)
             if found:
-                text.append(line[0:line.find(token)] + col.setfgcolor(token, "RED") + line[line.find(token) + len(token):])
-
-            if len(found) >= 1:
-                # buffer for add color for lines that contain same token more than once
-                pass
-
+                text.append(line[0:line.find(found[0])] + col.setfgcolor(found[0], "RED") + line[line.find(found[0]) + len(found[0]):])
     return text
 
 def grep_stdin(token):
