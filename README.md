@@ -60,8 +60,6 @@ If anyone is on windows, please help me out.
 
 # epilogue
 
-My email: honeastlynuts@gmail.com
-
 My twitter: [@Honestly__nuts](https://twitter.com/Honestly__nuts) for info on updates and other interactive stuff
 
 My reddit: [u/Honestly__nuts](https://www.reddit.com/user/Honestly__nuts) for the same stuff
