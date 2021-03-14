@@ -1,3 +1,5 @@
+# KINDA ABANDONED BUT KINDA NOT SO YEAH
+
 # Intro
 ## SCore-Utils ( working name )
 
@@ -21,13 +23,7 @@
      1. All the programs used in this repository are designed to be flexible and fairly self-contained. So if you want to use any of the functions from a program, You can just import the program.
 
 ### Why, just Why should you use this.
-While these programs are not an improvement in functionality from the original programs (they do the same thing). But when it comes to reading the source code and 
-source code modification, I think we can agree this is much better. Again, This is not an replacement for the original programs. This project tends to be useful
-for programmers and tinkeres. if you want to make your own customized version of 'ls' but don't want to code it from scratch, for the original programs you have to
-download the source code and then modify it and then compile it and **wait** you just got five hundred errors because you forgot to modify the header files.
-But if you use these programs and want to customize the sls program. Just go to the $Location/bin/ folder and modify the code and it's that easy. AND I know python
-is slower and stuff but on mordern computers it hardly makes a difference given the size of these programs. And even after that you don't find it useful then just don't
-use it. It's not like I'm holding you at gun point.
+please 😢
 
 # How to install
 #### Pre-requests
